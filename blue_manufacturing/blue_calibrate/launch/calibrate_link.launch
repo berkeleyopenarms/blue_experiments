@@ -37,14 +37,14 @@
     type="spawner"
     respawn="false"
     output="screen"
-    args="blue_controllers/joint_state_controller blue_controllers/torque_controller" />
+    args="blue_controllers/joint_state_controller blue_controllers/joint_position_controller" />
 
   <!-- Joint calibration -->
   <node
-    name="hardstop_calibrator"
+    name="simple_startup_calibration"
     pkg="blue_bringup"
-    type="hardstop_calibrate"
-    output="screen"/>
+    type="simple_startup_calibration.py"
+    output="screen" />
 
   <!-- Broadcast our joint states as TFs -->
   <node
