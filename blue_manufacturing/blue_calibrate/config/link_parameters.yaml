@@ -20,7 +20,7 @@ blue_hardware:
     softstop_tolerance: 0.1
     accelerometer_calibration: false
     endlink: "roll_link"
-    serial_port: "/dev/ttyUSB2"
+    serial_port: "/dev/ttyUSB0"
 
     accel_links:
         - right_base_link
