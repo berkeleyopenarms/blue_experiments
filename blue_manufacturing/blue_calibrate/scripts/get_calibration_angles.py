@@ -53,6 +53,8 @@ if __name__ == '__main__':
     a6 = ms[6] + -rot1 * gr1 + rot2 * gr2
 
     actuators = [a0, a1, a2, a3, a4, a5, a6]
+    print("raw")
+    print(actuators)
     actuators = [a % 2*np.pi for a in actuators]
     print("Save the following to the yaml configuration file")
     print(actuators)
