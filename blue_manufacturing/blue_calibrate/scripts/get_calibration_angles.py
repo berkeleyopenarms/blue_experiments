@@ -56,15 +56,16 @@ if __name__ == '__main__':
     print("raw")
     print(actuators)
 
-    # actuators = [ ( (a+np.pi) % 2*np.pi) - np.pi for a in actuators]
-    actuators_wrapped = []
-    for a in actuators:
-        while a > np.pi:
-            a -= 2 * np.pi
-        while a < -np.pi:
-            a += 2 * np.pi
-        actuators_wrapped.append(a)
+    # actuators = [ ( (a+np.pi) % (2*np.pi)) - np.pi for a in actuators]
+    # actuators_wrapped = []
+    # for a in actuators:
+        # while a > np.pi:
+            # a -= 2 * np.pi
+        # while a < -np.pi:
+            # a += 2 * np.pi
+        # actuators_wrapped.append(a)
 
     print("Save the following to the yaml configuration file")
-    print(actuators_wrapped)
+    # print(actuators_wrapped)
+    print(actuators)
 
