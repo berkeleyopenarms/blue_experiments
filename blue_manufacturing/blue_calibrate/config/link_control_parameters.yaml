@@ -31,6 +31,6 @@ blue_controllers:
       - lift_joint
       - roll_joint
     lift_joint:
-      pid: {p: 50, i: 0, d: 2.5, i_clamp: 0}
+      pid: {p: 100, i: 0, d: 8.5, i_clamp: 0}
     roll_joint:
-      pid: {p: 50, i: 0, d: 2.5, i_clamp: 0}
+      pid: {p: 100, i: 0, d: 8.5, i_clamp: 0}
