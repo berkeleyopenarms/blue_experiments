@@ -9,7 +9,6 @@ from blue_msgs.msg import MotorState
 class Arm:
     def __init__(self, side):
         rospy.init_node('Calibration', anonymous=True)
-        rate = rospy.Rate(200)
         self.motor_pos = [0.0 for i in range(8)]
         self.motor_names = rospy.get_param(side + "_arm/blue_hardware/motor_names")
         rospy.Subscriber(side + "_arm/blue_hardware/motor_states", MotorState, self.update_motors)
@@ -28,11 +27,11 @@ class Arm:
 gr1 = -7.1875
 gr2 = 8.2444852941
 
-rot1 = 2.189
+rot1 = 2.310
+# rot1 = 2.189
 rot2 = np.pi/2
 if __name__ == '__main__':
     arm = Arm("right")
-
     raw_input("Press enter to save base state ")
     ms = arm.get_motor_state()
     a0 = ms[0]
@@ -68,4 +67,3 @@ if __name__ == '__main__':
     print("Save the following to the yaml configuration file")
     # print(actuators_wrapped)
     print(actuators)
-
