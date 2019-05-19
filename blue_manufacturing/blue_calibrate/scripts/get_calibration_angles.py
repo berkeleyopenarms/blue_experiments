@@ -25,13 +25,13 @@ class Arm:
         print(self.motor_pos)
         return self.motor_pos
 
-gr1 = 7.1875
+gr1 = -7.1875
 gr2 = 8.2444852941
 
 rot1 = 2.189
 rot2 = np.pi/2
 if __name__ == '__main__':
-    arm = Arm("left")
+    arm = Arm("right")
 
     raw_input("Press enter to save base state ")
     ms = arm.get_motor_state()
